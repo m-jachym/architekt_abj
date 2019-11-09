@@ -1,0 +1,143 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: $abj-black;
+    .wrapper-menu {
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+            .nav-logo-ham {
+                display: flex;
+                flex-direction: row;
+                #logo {
+                    height: 48px;
+                    }
+                .hamburger {
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    display: none;
+                    height: 30px;
+                    margin-top: 5px;
+                    &:before {
+                        content: ''; 
+                        position: absolute;
+                        bottom: 0;
+                        width: 40px;
+                        height: 3px;
+                        background: white;
+                        transition: bottom .3s transform 0s;
+                    }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        width: 40px;
+                        height: 3px;
+                        background: white;
+                        transition: top .3s transform 0s;
+                    }
+                .line {
+                    background: white;
+                    width: 40px;
+                    height: 3px;
+                    }
+                }
+            }
+            ul.nav-ul {
+                li.nav-li {
+                    display: inline-block;
+                    text-align: center;
+                    font-size: 22px;
+                    font-family: 'BasierCircle-Regular';
+                    margin-right: 50px;
+                    transition: all 1s linear;
+                    &:last-child { 
+                        margin-left: 50px;
+                        margin-right: 0px;
+                        } 
+                    a.navItems {
+                        text-decoration: none;
+                        color: $abj-grey;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                        &:after {
+                            content: '';
+                            display: block;
+                            width: 0;
+                            height: 2px;
+                            background: $abj-grey;
+                            transition: width .3s;
+                        }
+                        &:hover:after {
+                            width: 50%;
+                            transition: width .3s; 
+                        }
+                        &:focus:after {
+                            width: 100%;
+                            transition: width .3s;
+                        }
+                    }
+                }
+            }
+
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 0px;
+        margin: 0px;
+        background: rgb(20,20,20);
+        transition: background 2.5s, height 1s;
+        height: 70px !important;
+        padding-top: 15px;
+        display:flex;
+        align-items: center;
+        .nav-logo-ham {
+            width: 100%;
+            justify-content: space-between;
+            padding: 0px 50px;
+            #logo {
+                height: 40px;
+                transition: height 1s;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        ul.nav-ul {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            width: 100%;
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height .3s;
+            li.nav-li {
+                padding: 40px 0px;
+                border-bottom: 1px solid #ffff00;
+                a {
+                    color: rgb(20,20,20);
+                    font-size: 22px;
+                    &:nth-child(4) {
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+    }
+}                   
+
+                
+            

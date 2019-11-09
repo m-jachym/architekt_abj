@@ -1,0 +1,13 @@
+.button {
+    border: none;
+    border-radius: 30px;
+    height: 45px;
+    padding: 10px 35px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'basier_circlemedium';
+    &__yellow {
+        background: $abj-yellow;
+        color: $abj-black;
+    }
+}

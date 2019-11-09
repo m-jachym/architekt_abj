@@ -1,0 +1,66 @@
+$abj-white: #FFFFFF;
+$abj-yellow: #FFFF00;
+$abj-yellow-1: #F8EC31;
+$abj-grey: #EEEEEE;
+$abj-grey-1: #F3F3F4;
+$abj-black: #323232;
+$abj-dark-blue: #2F2A4D;
+
+html, body {
+    margin: 0;
+    font-size: 16px;
+}
+
+//menu 
+
+.menu-thin {
+    transition: background 2.5s, height 1s;
+    height: 60px !important;
+    .nav-logo-ham {
+        #logo {
+            height: 40px !important;
+            transition: height 1s;
+        }
+    }
+    ul.nav-ul {
+        li.nav-li {
+            font-size: 20px !important;
+        }
+    }
+}
+
+.hamburger-clicked {
+    &:after {
+        top: 14px !important;
+        transform: rotate(225deg);
+        transition: transform .8s !important;
+    }
+}
+
+.hamburger-clicked {
+    &:before {
+        bottom: 14px !important;
+        transform: rotate(-225deg);
+        transition: transform .8s !important;
+    }
+}
+
+.line-hide {
+    display: none;
+}
+
+.nav-display {
+    display: inline-block;
+}
+@media (max-width: 768px) {
+    .nav-display {
+        max-height: 1000px !important;
+        overflow: visible !important; 
+    }
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}

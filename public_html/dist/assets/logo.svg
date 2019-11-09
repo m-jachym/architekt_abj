@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 48">
+  <defs>
+    <style>
+      .cls-1, .cls-6 {
+        fill: #323232;
+      }
+
+      .cls-2 {
+        fill: #ff0;
+      }
+
+      .cls-3 {
+        fill: #dcd705;
+      }
+
+      .cls-4 {
+        fill: #fcf969;
+      }
+
+      .cls-5 {
+        fill: #eee;
+      }
+
+      .cls-5, .cls-6 {
+        font-size: 25px;
+        font-family: Bauhaus93, "Bauhaus 93";
+      }
+    </style>
+  </defs>
+  <g id="logo" transform="translate(-420 131)">
+    <rect id="Rectangle_4" data-name="Rectangle 4" class="cls-1" width="42" height="48" transform="translate(546 -131)"/>
+    <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-2" width="42" height="48" transform="translate(504 -131)"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" class="cls-3" width="42" height="48" transform="translate(462 -131)"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-4" width="42" height="48" transform="translate(420 -131)"/>
+    <text id="ABJ" class="cls-5" transform="translate(548 -101)"><tspan x="0" y="0">ABJ</tspan></text>
+    <text id="pracownia" class="cls-6" transform="translate(423 -101)"><tspan x="0" y="0">pracownia</tspan></text>
+  </g>
+</svg>
