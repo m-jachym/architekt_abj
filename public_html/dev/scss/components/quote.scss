@@ -1,0 +1,17 @@
+.quote-section {
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .quote-wrapper {
+        p.quote-text {
+            font-size: 40px;
+            font-family: 'basier_circleitalic';
+            color: $abj-white;
+            text-align: center;
+        }
+    }
+}
