@@ -56,7 +56,8 @@ header {
                     display: inline-block;
                     text-align: center;
                     font-size: 18px;
-                    font-family: 'basier_circleregular';
+                    font-family: 'basier_circlemedium';
+                    text-transform: lowercase;
                     margin-right: 50px;
                     transition: all 1s linear;
                     &:last-child { 
