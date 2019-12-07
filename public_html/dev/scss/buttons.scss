@@ -6,8 +6,13 @@
     cursor: pointer;
     font-size: 18px;
     font-family: 'basier_circlemedium';
+    width: fit-content;
     &__yellow {
         background: $abj-yellow;
         color: $abj-black;
+    }
+    &__black {
+        background: $abj-black;
+        color: $abj-grey;
     }
 }
