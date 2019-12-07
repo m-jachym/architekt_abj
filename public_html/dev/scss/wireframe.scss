@@ -6,6 +6,20 @@
     margin: 0px auto;
     width: 1364px;
 }
+
+.section-map {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
 @media (max-width: 1440px) {
     .section {
         width: 100%;

@@ -1,0 +1,35 @@
+.footer-section {
+  background-color: $abj-black;
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    .copyrights, .dev-by {
+      font-size: 12px;
+      font-family: 'basier_circlemedium';
+      color: $abj-grey;
+      &::selection {
+        background: $abj-marked;
+      }
+    }
+
+    .foot-menu {
+      display: flex;
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        color: $abj-grey;
+
+        li.foot-menu-item {
+          margin: 0 30px;
+          font-size: 20px;
+          font-family: 'basier_circlemedium';
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
