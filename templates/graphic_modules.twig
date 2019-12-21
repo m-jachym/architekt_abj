@@ -1,0 +1,46 @@
+{% for graphicBlock in graphicBlocks.wybierzModulGraficzny.all() %}
+
+    {% switch graphicBlock.type %}
+    {% case "banerZeSlajdami" %}
+        {% include "components/_news-banner.html" with {
+            graphicBlock: graphicBlock
+        } %}
+
+    {% case "oNas" %}
+        {% include "home/_about.html" with {
+            graphicBlock: graphicBlock
+        } %}
+
+    {% case "klienciLogotypy" %}
+        {% include "home/_clients.html" with {
+            graphicBlock: graphicBlock
+        } %}
+
+    {% case "formularzKontaktowy" %}
+        {% include "home/_contact.html" with {
+            graphicBlock: graphicBlock
+        } %}
+
+    {% case "wybierzObszary" %}
+        {% include "home/_fields.html" with {
+            graphicBlock: graphicBlock
+        } %}
+
+    {% case "socialMedia" %}
+        {% include "home/_social.html" with {
+            graphicBlock: graphicBlock
+        } %}
+
+    {% case "centrumPrasowe" %}
+        {% include "home/_news.html" with {
+            graphicBlock: graphicBlock
+        } %}
+
+
+    {% default %}
+
+        <p>Nie ma obsługi {{ graphicBlock.type }}(moduły graficzne)</p>
+
+    {% endswitch %}
+
+{% endfor %}

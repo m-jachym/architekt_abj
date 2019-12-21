@@ -1,0 +1,24 @@
+{% for matrixBlock in matrixField.all() %}
+
+    {% switch matrixBlock.type %}
+
+    {% case "modulGraficzny" %}
+        {% include "graphic_modules" with {
+            graphicBlocks: matrixBlock,
+        } %}
+
+{#    {% case "cyfraINaglowek" %}#}
+{#        {% include "components/_title-with-number.html" with {#}
+{#            matrixBlock: matrixBlock,#}
+{#        } %}#}
+
+{#    {% case "margines" %}#}
+{#        {% include "components/_margin-new.html" with {#}
+{#            matrixBlock: matrixBlock,#}
+{#        } %}#}
+
+    {% default %}
+        <p>Nie ma obsługi {{ matrixBlock.type }} (matrix)</p>
+
+    {% endswitch %}
+{% endfor %}
