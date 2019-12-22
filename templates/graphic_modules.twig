@@ -1,40 +1,37 @@
 {% for graphicBlock in graphicBlocks.wybierzModulGraficzny.all() %}
 
     {% switch graphicBlock.type %}
-    {% case "banerZeSlajdami" %}
-        {% include "components/_news-banner.html" with {
+
+    {% case "tytulINaglowek" %}
+        {% include "components/title-and-header.html" with {
             graphicBlock: graphicBlock
         } %}
 
-    {% case "oNas" %}
-        {% include "home/_about.html" with {
+    {% case "underbanner" %}
+        {% include "components/underbanner.html" with {
             graphicBlock: graphicBlock
         } %}
 
-    {% case "klienciLogotypy" %}
-        {% include "home/_clients.html" with {
+    {% case "oMnie" %}
+        {% include "components/about.html" with {
             graphicBlock: graphicBlock
         } %}
 
-    {% case "formularzKontaktowy" %}
-        {% include "home/_contact.html" with {
+    {% case "cytat" %}
+        {% include "components/quote.html" with {
             graphicBlock: graphicBlock
         } %}
 
-    {% case "wybierzObszary" %}
-        {% include "home/_fields.html" with {
+    {% case "kontaktZMapa" %}
+        {% include "components/map.html" with {
             graphicBlock: graphicBlock
         } %}
 
-    {% case "socialMedia" %}
-        {% include "home/_social.html" with {
+    {% case "tabZOferta" %}
+        {% include "components/oferta.html" with {
             graphicBlock: graphicBlock
         } %}
 
-    {% case "centrumPrasowe" %}
-        {% include "home/_news.html" with {
-            graphicBlock: graphicBlock
-        } %}
 
 
     {% default %}

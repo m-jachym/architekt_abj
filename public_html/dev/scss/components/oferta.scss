@@ -8,43 +8,75 @@ section#oferta {
     margin: 0px auto;
 
     .tab-wrapper {
-      .tab {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .tab-header {
+        position: relative;
+        height: 100px;
         width: 100%;
-        border: 2px solid black;
-        background: white;
-        border-top-right-radius: 40px;
-        padding: 30px 30px;
-
-        .text-wrapper {
-          width: 75%;
+        border-radius: 10px;
+        background: $abj-black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        cursor: pointer;
+        .header-text {
+          margin-bottom: 0;
+          font-family: 'basier_circlemedium';
+          font-size: 34px;
+          color: $abj-grey-1;
         }
-
-        .btn-show-more {
-          display: flex;
-          flex-direction: row;
+        .circle-btn {
           position: relative;
-
-          .btn-text {
+          height: 50px;
+          width: 50px;
+          border-radius: 50px;
+          border: 3px solid $abj-grey-1;
+          transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+          &:after {
+            content: '';
             position: absolute;
-            font-weight: 600;
+            height: 3px;
+            width: 28px;
+            top: calc(50% - 1.5px);
+            left: 8px;
+            background-color: $abj-grey-1;
           }
+          &:before {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 28px;
+            top: calc(50% - 1.5px);
+            left: 8px;
+            background-color: $abj-grey-1;
+            transform: rotate(90deg);
+            opacity: 1;
+          }
+          &-rotate {
+            transform: rotate(360deg);
+            transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+            &:before {
+              opacity: 0
+            }
+          }
+        }
+      }
+      .tab-body {
+        height: 1px;
+        transition: height .4s ease-in-out;
+        opacity: 0;
+        width: 100%;
+        background: $abj-yellow-1;
 
-          .btn-yellow-part {
-            width: 40px;
-            height: 40px;
-          }
-
-          .btn-yellow1 {
-            background: #FDF868;
-          }
-
-          .btn-yellow2 {
-            background: #DDD705;
-          }
-
-          .btn-yellow3 {
-            background: #FFFF01;
-          }
+        &-visible {
+          height: 200px;
+          opacity: 1;
+          transition: height .4s ease-in-out;
         }
       }
     }

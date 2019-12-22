@@ -14,6 +14,44 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    .title-and-header-map {
+      display: flex;
+      flex-direction: column;
+      .title-dot-wrap-map {
+        position: relative;
+        width: 100%;
+        height: 33px;
+        .title-dot-map {
+          position: absolute;
+          left: -16px;
+          height: 33px;
+          width: auto;
+          padding: 0 16px;
+          border-radius: 20px;
+          background-color: $abj-black;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          p {
+            text-transform: uppercase;
+            font-family: 'basier_circlemedium';
+            font-size: 16px;
+            color: $abj-white;
+            margin-bottom: 0;
+          }
+        }
+      }
+      .title-and-header-header-map {
+        font-size: 56px;
+        font-family: 'basier_circlebold';
+        margin-bottom: 5px;
+      }
+      .title-and-header-subheader-map {
+        font-size: 28px;
+        font-family: 'basier_circlemedium';
+      }
+    }
     .tile {
       width: 536px;
       height: 90px;

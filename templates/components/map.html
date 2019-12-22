@@ -1,12 +1,22 @@
 <section class="section-map">
     <div class="map-wrapper-left">
+        {% for item in graphicBlock.kontaktZMapa.all() %}
         <div class="left-size">
+            <div class="title-and-header-map">
+                <div class="title-dot-wrap-map">
+                    <div class="title-dot-map">
+                        <p>{{item.tytul}}</p>
+                    </div>
+                </div>
+                <p class="title-and-header-header-map">{{item.naglowek}}</p>
+                <p class="title-and-header-subheader-map"></p>
+            </div>
             <div class="tile">
                 <div class="icon-wrap">
                     <img src="./dist/assets/baseline-phone-24px.png" alt="">
                 </div>
                 <div class="text">
-                    603 215 066
+                    {{item.pastylka1}}
                 </div>
             </div>
             <div class="tile">
@@ -14,7 +24,7 @@
                     <img src="./dist/assets/baseline-alternate_email-24px.png" alt="">
                 </div>
                 <div class="text">
-                    pracownia@abjarchitekt.pl
+                    {{item.pastylka2}}
                 </div>
             </div>
             <div class="tile">
@@ -22,10 +32,11 @@
                     <img src="./dist/assets/baseline-place-24px.png" alt="">
                 </div>
                 <div class="text">
-                    Reja 11, 39-300 Mielec
+                    {{item.pastylka3}}
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
     <div class="map-wrapper-right">
 

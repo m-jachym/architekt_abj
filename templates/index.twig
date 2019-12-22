@@ -20,31 +20,27 @@
 
 </head>
 <body>
-{#{% include 'common/menu.html' %}#}
-{#{% include 'common/banner.html' %}#}
 {#{% include 'components/underbanner.html' %}#}
 {#{% include 'components/quote.html' %}#}
-{#{% include 'components/oferta.html' %}#}
 {#{% include 'components/title-and-header.html' %}#}
 {#{% include 'components/about.html' %}#}
 {#{% include 'components/title-and-header.html' %}#}
 {#{% include 'components/contact-form.html' %}#}
-{#{% include 'components/map.html' %}#}
 {#{% include 'components/footer.html' %}#}
 
-{#{% extends "_layout" %}#}
 
 {% block content %}
 
-    {% include 'common/banner' %}
+    {% include 'common/menu.html' %}
+    {% include 'common/banner.html' %}
 
     {% include 'matrix.twig'
-    %}
-{#    {% include 'matrix.twig'#}
-{#        with {#}
-{#        matrixField : entry.trescPodstrony,#}
-{#    }#}
-{#    %}#}
+        with {
+        matrixField : entry.trescPodstrony,
+    } %}
+
+
+
 
 {% endblock %}
 

@@ -1,12 +1,13 @@
 <section class="section section-about">
     <div class="wrapper wrapper-about">
+        {% for item in graphicBlock.oMnie.all() %}
+<!--        {% set img =  item.zdjecie | length ? item.zdjecie.one().url() : ''  %}-->
         <div class="image-wrap">
             <div class="image-about" style="background-image: url('../public_html/dist/assets/womanprofile.png')"></div>
         </div>
         <div class="text-about">
-                Posiadam kilkunastoletnie doświadczenie w pracy projektowej zdobywane podczas studiów i dalszej pracy zawodowej. 
-                Decyzją nr Rz/A-04/08 uzyskałam uprawnienia budowlane w specjalności architektonicznej do projektowania bez ograniczeń. 
-                Na bieżąco podnoszę swoje kwalifikacje i aktualizuję wiedzę poprzez liczne kursy i szkolenia. Prowadzę autorską pracownię projektową, która świadczy usługi w zakresie projektowania architektonicznego, z ukierunkowaniem na projekty termomodernizacyjne (przebudowy i rozbudowy) oraz projekty nowych budynków o wyśrubowanych parametrach izolacyjności termicznej. Warsztat mojej pracy uzupełnia nowoczesne oprogramowanie umożliwiające i szacunkową ocenę energochłonności i wykorzystanie technologii BIM.
+            {{item.opis}}
         </div>
+        {% endfor %}
     </div>
 </section>
