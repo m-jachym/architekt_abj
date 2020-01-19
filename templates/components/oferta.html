@@ -2,18 +2,18 @@
     <div class="oferta-wrapper">
         {% for item in graphicBlock.oferta.all() %}
 
-            <div class="tab-wrapper">
-                <div class="tab-header">
-                    <p class="header-text">
-                        {{item.tytul}}
-                    </p>
-                    <div class="circle-btn"></div>
-                </div>
-                <div class="tab-body">
-                    {{item.rozwiniecie}}
-                    <div class="button button__black">zwiń</div>
-                </div>
+        <div class="tab-wrapper">
+            <div class="tab-header" data-tab="{{loop.index}}">
+                <p class="header-text">
+                    {{item.tytul}}
+                </p>
+                <div class="circle-btn" id="btn{{loop.index}}"></div>
             </div>
+            <div class="tab-body" id="{{loop.index}}">
+                {{item.rozwiniecie}}
+                <div class="button button__black kurwamax" data-tab="{{loop.index}}">zwiń</div>
+            </div>
+        </div>
 
         {% endfor %}
     </div>

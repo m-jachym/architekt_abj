@@ -1,6 +1,10 @@
 .map-wrapper-right {
   width: 50%;
   background-color: hotpink;
+  #map {
+    height: 100%;
+    width: 100%;
+  }
 }
 .map-wrapper-left {
   width: 50%;
