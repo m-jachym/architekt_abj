@@ -1,6 +1,6 @@
 {% for item in graphicBlock.cytat.all() %}
-    <!--        {% set img =  item.zdjecieWTle | length ? item.zdjecieWTle.one().url() : ''  %}-->
-    <div class="section quote-section" style="background-image: url(dist/assets/quote-bg.png);">
+{% set img =  item.obrazWTle | length ? item.obrazWTle.one().url() : ''  %}
+    <div class="section quote-section" style="background-image: url('{{img}}');">
         <div class="wrapper quote-wrapper">
             <p class="quote-text">
                 {{item.tekst}}

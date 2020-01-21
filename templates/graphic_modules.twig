@@ -31,8 +31,11 @@
         {% include "components/oferta.html" with {
             graphicBlock: graphicBlock
         } %}
+    {% case "backgroundOtwarcie" %}
+        <div class="backgroundOpen-{{ graphicBlock.backgroundOtwarcie }}">
 
-
+    {% case "backgroundZamkniecie" %}
+        </div>
 
     {% default %}
 

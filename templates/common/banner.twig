@@ -2,11 +2,10 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000"
          data-pause="false">
         <div class="carousel-inner">
-
             {% for item in entry.slajder.all() %}
                 <div {% if loop.index0 == 0 %} class="carousel-item active" {% else %} class="carousel-item" {% endif %}>
-                    {#                    {% set img item.zdjecieWTle | length ? item.zdjecieWTle.one().url() %}#}
-                    <div class="d-block w-100 slider-item" style="background-image: url(dist/assets/archzdj1.jpg)"
+                    {% set img = item.zdjecieWTle | length ? item.zdjecieWTle.one().url() : '' %}
+                    <div class="d-block w-100 slider-item" style="background-image: url(' {{img}} ')"
                          alt="First slide">
                         <div class="slider-gradient">
 
@@ -26,57 +25,6 @@
                     </div>
                 </div>
             {% endfor %}
-
-
-            {#            <div class="carousel-item active">#}
-            {#                <div class="d-block w-100 slider-item" style="background-image: url(dist/assets/maindach.jpg)"#}
-            {#                     alt="Second slide">#}
-            {#                    <div class="slider-gradient">#}
-
-            {#                        <div class="slide-content wrapper">#}
-            {#                            <div class="slide-content-wrapper">#}
-            {#                                <h1 class="slide-title">#}
-            {#                                    {% for item in entry.slajder.all() %}#}
-            {#                                        {{ item.tytul }}#}
-            {#                                    {% endfor %}#}
-
-            {#                                </h1>#}
-            {#                                <p class="slide-text">#}
-            {#                                    ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptas tempore ratione#}
-            {#                                    numquam sunt mollitia architecto iste. Aspernatur, obcaecati sequi?#}
-
-            {#                                </p>#}
-            {#                                <button class="button button__yellow">Zobacz więcej</button>#}
-            {#                            </div>#}
-            {#                        </div>#}
-
-            {#                    </div>#}
-            {#                </div>#}
-            {#            </div>#}
-
-            {#            <div class="carousel-item">#}
-            {#                <div class="d-block w-100 slider-item" style="background-image: url(dist/assets/arch3.jpg)"#}
-            {#                     alt="Third slide">#}
-            {#                    <div class="slider-gradient">#}
-
-            {#                        <div class="slide-content wrapper">#}
-            {#                            <div class="slide-content-wrapper">#}
-            {#                                <h1 class="slide-title">#}
-            {#                                    Dokumentacja i wykonastwo#}
-            {#                                </h1>#}
-            {#                                <p class="slide-text">#}
-            {#                                    Analizy, uzyskiwanie pozwoleń, Lorem ipsum dolor sit amet consectetur adipisicing#}
-            {#                                    elit. tia architecto iste. Aspernatur, obcaecati sequi?#}
-
-            {#                                </p>#}
-            {#                                <button class="button button__yellow">Zobacz więcej</button>#}
-            {#                            </div>#}
-            {#                        </div>#}
-
-            {#                    </div>#}
-            {#                </div>#}
-            {#            </div>#}
-
         </div>
     </div>
 </section>

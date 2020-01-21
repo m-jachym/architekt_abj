@@ -1,9 +1,9 @@
 <section class="section section-about">
     <div class="wrapper wrapper-about">
         {% for item in graphicBlock.oMnie.all() %}
-<!--        {% set img =  item.zdjecie | length ? item.zdjecie.one().url() : ''  %}-->
+        {% set img = item.zdjecie | length ? item.zdjecie.one().url() : '' %}
         <div class="image-wrap">
-            <div class="image-about" style="background-image: url('../public_html/dist/assets/womanprofile.png')"></div>
+            <div class="image-about" style="background-image: url('{{img}}')"></div>
         </div>
         <div class="text-about">
             {{item.opis}}
