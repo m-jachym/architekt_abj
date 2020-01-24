@@ -12,7 +12,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: row;
-}
+};
 
 
 
@@ -26,7 +26,28 @@
         overflow: hidden;
     }
     .wrapper {
-        margin: 0px auto;
+        margin: 0 auto;
         width: 1245px;
+    }
+}
+@media (max-width: 1245px) {
+    .section {
+        width: 100%;
+        overflow: hidden;
+    }
+    .wrapper {
+        margin: 0 auto;
+        width: 1024px;
+    }
+}
+@media (max-width: 1024px) {
+    .section {
+        width: 100%;
+        overflow: hidden;
+    }
+    .wrapper {
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 100%;
     }
 }
