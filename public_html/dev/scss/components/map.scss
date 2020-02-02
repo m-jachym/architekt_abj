@@ -1,6 +1,5 @@
 .map-wrapper-right {
   width: 50%;
-  background-color: hotpink;
   #map {
     height: 100%;
     width: 100%;
@@ -8,11 +7,11 @@
 }
 .map-wrapper-left {
   width: 50%;
+  margin: 50px 0;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-end;
-  background-color: $abj-grey;
   .left-size {
     width: 682px;
     display: flex;
@@ -39,8 +38,9 @@
           justify-content: center;
           p {
             text-transform: uppercase;
-            font-family: 'basier_circlemedium';
-            font-size: 16px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 12px;
             color: $abj-white;
             margin-bottom: 0;
           }
@@ -48,12 +48,14 @@
       }
       .title-and-header-header-map {
         font-size: 56px;
-        font-family: 'basier_circlebold';
+        font-family: 'Lato', sans-serif;
+        font-weight: 800;
         margin-bottom: 5px;
       }
       .title-and-header-subheader-map {
         font-size: 28px;
-        font-family: 'basier_circlemedium';
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
       }
     }
     .tile {

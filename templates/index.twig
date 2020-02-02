@@ -9,7 +9,9 @@
     <meta name="referrer" content="origin-when-cross-origin"/>
 
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:200,300,400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Raleway:300,400,500,600,700,800,900&display=swap&subset=latin-ext" rel="stylesheet">
+{#    font-family: 'Lato', sans-serif;#}
+{#    font-family: 'Raleway', sans-serif;#}
     <link href="https://fonts.googleapis.com/css?family=Arapey|Lora|Playfair+Display|Slabo+27px&display=swap"
           rel="stylesheet">    <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -20,17 +22,8 @@
 
 </head>
 <body>
-{#{% include 'components/underbanner.html' %}#}
-{#{% include 'components/quote.html' %}#}
-{#{% include 'components/title-and-header.html' %}#}
-{#{% include 'components/about.html' %}#}
-{#{% include 'components/title-and-header.html' %}#}
-{#{% include 'components/contact-form.html' %}#}
-{#{% include 'components/footer.html' %}#}
-
 
 {% block content %}
-
     {% include 'common/menu.html' %}
     {% include 'common/banner.twig' %}
 
@@ -39,12 +32,7 @@
         matrixField : entry.trescPodstrony,
     } %}
 
-    {% include 'components/contact-form.html' %}
     {% include 'components/footer.html' %}
-
-
-
-
 {% endblock %}
 
 

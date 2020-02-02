@@ -1,7 +1,7 @@
 section#oferta {
   width: 100%;
   overflow: hidden;
-  background: $abj-grey-1;
+  height: 100%;
 
   .oferta-wrapper {
     width: 1024px;
@@ -11,6 +11,7 @@ section#oferta {
       display: flex;
       flex-direction: column;
       width: 100%;
+      margin-bottom: 10px;
 
       .tab-header {
         position: relative;
@@ -26,7 +27,8 @@ section#oferta {
         cursor: pointer;
         .header-text {
           margin-bottom: 0;
-          font-family: 'basier_circlemedium';
+          font-family: 'Lato', sans-serif;
+          font-weight: 500;
           font-size: 34px;
           color: $abj-grey-1;
         }
@@ -72,9 +74,22 @@ section#oferta {
         opacity: 0;
         width: 100%;
         background: $abj-yellow-1;
+        border-radius: 10px;
 
+        p {
+          font-size: 22px;
+          font-family: 'Lato', sans-serif;
+          font-weight: 500;
+        }
+        li {
+          font-size: 22px;
+          font-family: 'Lato', sans-serif;
+          font-weight: 500;
+          list-style-type: disc;
+          margin-left: 20px;
+        }
         &-visible {
-          height: 200px;
+          height: 100%;
           opacity: 1;
           transition: height .4s ease-in-out;
         }

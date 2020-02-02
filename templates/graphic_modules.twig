@@ -3,12 +3,12 @@
     {% switch graphicBlock.type %}
 
     {% case "tytulINaglowek" %}
-        {% include "components/title-and-header.html" with {
+        {% include "components/title-and-header.twig" with {
             graphicBlock: graphicBlock
         } %}
 
     {% case "underbanner" %}
-        {% include "components/underbanner.html" with {
+        {% include "components/underbanner.twig" with {
             graphicBlock: graphicBlock
         } %}
 
@@ -23,7 +23,7 @@
         } %}
 
     {% case "kontaktZMapa" %}
-        {% include "components/map.html" with {
+        {% include "components/map.twig" with {
             graphicBlock: graphicBlock
         } %}
 
@@ -31,11 +31,12 @@
         {% include "components/oferta.html" with {
             graphicBlock: graphicBlock
         } %}
-    {% case "backgroundOtwarcie" %}
-        <div class="backgroundOpen-{{ graphicBlock.backgroundOtwarcie }}">
 
-    {% case "backgroundZamkniecie" %}
-        </div>
+    {% case "formularzKontaktowy" %}
+        {% include "components/contact-form.twig" with {
+            graphicBlock: graphicBlock
+        } %}
+
 
     {% default %}
 

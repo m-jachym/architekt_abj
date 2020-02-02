@@ -8,7 +8,8 @@
 
     .copyrights, .dev-by {
       font-size: 12px;
-      font-family: 'basier_circlemedium';
+      font-family: 'Lato', sans-serif;
+      font-weight: 500;
       color: $abj-grey;
       &::selection {
         background: $abj-marked;
@@ -26,7 +27,8 @@
         li.foot-menu-item {
           margin: 0 30px;
           font-size: 15px;
-          font-family: 'basier_circlemedium';
+          font-family: 'Lato', sans-serif;
+          font-weight: 500;
           text-transform: uppercase;
         }
       }

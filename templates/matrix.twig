@@ -7,6 +7,22 @@
             graphicBlocks: matrixBlock,
         } %}
 
+    {% case "tytulINaglowek" %}
+        {% include "components/title-and-header" with {
+            graphicBlocks: matrixBlock,
+        } %}
+
+    {% case "backgroundOtwarcie" %}
+        <div class="backgroundOpen-{{ matrixBlock.backgroundOtwarcie }}">
+
+    {% case "backgroundZamkniecie" %}
+        </div>
+
+    {% case "margines" %}
+        <div class="marginOpen-{{ matrixBlock.margines }}"></div>
+
+
+
     {% default %}
         <p>Nie ma obsługi {{ matrixBlock.type }} (matrix)</p>
 

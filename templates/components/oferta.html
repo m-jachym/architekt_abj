@@ -1,4 +1,4 @@
-<section id="oferta" style="height: 1000px !important;">
+<section id="oferta">
     <div class="oferta-wrapper">
         {% for item in graphicBlock.oferta.all() %}
 
@@ -10,8 +10,10 @@
                 <div class="circle-btn" id="btn{{loop.index}}"></div>
             </div>
             <div class="tab-body" id="{{loop.index}}">
-                {{item.rozwiniecie}}
-                <div class="button button__black kurwamax" data-tab="{{loop.index}}">zwiń</div>
+                <div style="margin: 50px">
+                    {{item.rozwiniecie}}
+                    <div class="button button__black kurwamax" data-tab="{{loop.index}}">zwiń</div>
+                </div>
             </div>
         </div>
 

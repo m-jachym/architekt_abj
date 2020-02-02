@@ -64,7 +64,8 @@ header {
         display: inline-block;
         text-align: center;
         font-size: 18px;
-        font-family: 'basier_circlemedium';
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
         text-transform: lowercase;
         margin-right: 50px;
         transition: all 1s linear;
@@ -77,6 +78,7 @@ header {
         a.navItems {
           text-decoration: none;
           color: $abj-grey;
+
 
           &:hover {
             text-decoration: none;

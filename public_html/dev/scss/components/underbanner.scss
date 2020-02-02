@@ -1,5 +1,4 @@
 .underbanner {
-  background-color: #EEEEEE;
   .underbanner-wrapper {
     display: flex;
     flex-direction: row;
@@ -21,7 +20,8 @@
         justify-content: space-between;
         .tile-text {
           font-size: 36px;
-          font-family: 'basier_circlebold';
+          font-family: 'Lato', sans-serif;
+          font-weight: bold;
           line-height: 43px;
           width: 550px;
         }

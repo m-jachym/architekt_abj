@@ -32,17 +32,24 @@ return [
     'dev' => [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
         'devMode' => true,
+        'allowAdminChanges' => true,
+        'extraAllowedFileExtensions' => 'json',
+        'cache' => false,
+        'rootUrl' => 'http://localhost/architekt_abj/public_html/',
+        'siteUrl' => 'http://localhost/architekt_abj/public_html/',
     ],
 
     // Staging environment settings
     'staging' => [
-        // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => true,
+        // Prevent administrative changes from being made on staging
+        'devMode' => false,
+        'allowAdminChanges' => true
     ],
 
     // Production environment settings
     'production' => [
-        // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => true,
-    ],
+        // Prevent administrative changes from being made on production
+        'devMode' => false,
+        'allowAdminChanges' => true
+    ]
 ];

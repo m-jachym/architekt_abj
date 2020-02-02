@@ -34,19 +34,21 @@
                                 margin-bottom: 13vh;
                                 h1.slide-title {
                                     color: $abj-grey;
-                                    font-family: 'basier_circlebold';
+                                    font-family: 'Lato', sans-serif;
+                                    font-weight: 900;
                                     font-size: 56px;
                                     line-height: 64px;
                                     margin-bottom: 20px;
                                 }
-                                p.slide-text {
+                                p {
                                     color: $abj-grey;
-                                    font-family: 'basier_circlemedium';
+                                    font-family: 'Lato', sans-serif;
+                                    font-weight: 500;
                                     font-size: 26px;
                                     line-height: 36px;
                                     margin-bottom: 60px;
                                     width: 80%;
-                                }                                
+                                }
                             }
                         }
                     }

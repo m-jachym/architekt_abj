@@ -1,0 +1,36 @@
+<section class="underbanner section">
+    <div class="underbanner-wrapper wrapper">
+        {% for item in graphicBlock.underbanner.all() %}
+            {% if item.type == "tabliczki" %}
+                {% set url1 = item.linkNaPrzyciskuTab1 | length ? item.linkNaPrzyciskuTab1.one().url() : '' %}
+                {% set url2 = item.linkNaPrzyciskuTab1 | length ? item.linkNaPrzyciskuTab1.one().url() : '' %}
+
+                <div class="left-side">
+                    <div class="tile" style="background-color: #323232">
+                        <div class="tile-text" style="color: #EEEEEE">{{ item.tytulTab1 }}
+                        </div>
+                        <div class="tile-button">
+                            <div class="button button__grey">{{ item.napisNaPrzyciskuTab1 }}</div>
+                        </div>
+                    </div>
+                    <div class="tile" style="background-color: #F8EC31">
+                        <div class="tile-text" style="color: #323232">{{ item.tytulTab2 }}
+                        </div>
+                        <div class="tile-button">
+                            <div class="button button__black">{{ item.napisNaPrzyciskuTab2 }}</div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        {% for item in graphicBlock.underbanner.all() %}
+            {% if item.type == "obrazekPoPrawej" %}
+                {% set img = item.obrazek | length ? item.obrazek.one().url() : '' %}
+                <div class="right-side">
+                    <div class="image-pic" style="background-image: url({{ img }});"></div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

@@ -1,7 +1,11 @@
 <section class="section-map">
     <div class="map-wrapper-left">
         {% for item in graphicBlock.kontaktZMapa.all() %}
-        <div class="left-size">
+            {% set icon1 = item.ikona1 | length ? item.ikona1.one().url() : '' %}
+            {% set icon2 = item.ikona2 | length ? item.ikona2.one().url() : '' %}
+            {% set icon3 = item.ikona3 | length ? item.ikona3.one().url() : '' %}
+
+            <div class="left-size">
             <div class="title-and-header-map">
                 <div class="title-dot-wrap-map">
                     <div class="title-dot-map">
@@ -13,7 +17,7 @@
             </div>
             <div class="tile">
                 <div class="icon-wrap">
-                    <img src="./dist/assets/baseline-phone-24px.png" alt="">
+                    <img src="{{icon1}}" alt="">
                 </div>
                 <div class="text">
                     {{item.pastylka1}}
