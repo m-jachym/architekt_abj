@@ -28,6 +28,7 @@
     },
     "dependencies": {
         "babel-preset-es2015": "^6.24.1",
-        "babel-preset-stage-2": "^6.24.1"
+        "babel-preset-stage-2": "^6.24.1",
+        "gulp-install": "^1.1.0"
     }
 }
